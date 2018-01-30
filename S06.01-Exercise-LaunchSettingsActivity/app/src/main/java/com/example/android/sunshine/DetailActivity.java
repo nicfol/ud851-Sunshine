@@ -55,5 +55,22 @@ public class DetailActivity extends AppCompatActivity {
         return true;
     }
 
-    // TODO (7) Launch SettingsActivity when the Settings option is clicked
+    // COMPLETe (7) Launch SettingsActivity when the Settings option is clicked
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        // COMPLETE (1) Add new Activity called SettingsActivity using Android Studio wizard
+        // Do step 2 in SettingsActivity
+        // COMPLETE (2) Set setDisplayHomeAsUpEnabled to true on the support ActionBar
+
+        // COMPLETE (6) Launch SettingsActivity when the Settings option is clicked
+
+        if(id == R.id.action_settings) {
+            Intent startSettingsActivity = new Intent(this, SettingsActivity.class);
+            startActivity(startSettingsActivity);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
